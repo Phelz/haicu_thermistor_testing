@@ -1,0 +1,31 @@
+[project]
+name = "haicu-thermistor-testing"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Philopateer Ghaly",email = "philogeee@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dash (>=4.1.0,<5.0.0)",
+    "dash-bootstrap-components (>=2.0.4,<3.0.0)",
+    "pandas (>=3.0.2,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    {include = "pages", from = "src"},
+    {include = "components", from = "src"},
+    {include = "layouts", from = "src"},
+    {include = "utils", from = "src"},
+    {include = "assets", from = "src"},
+    {include = "data", from = "."},
+
+
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
